@@ -27,7 +27,7 @@ async def lifespan(app: FastAPI):
     await db_instance.close_database_connection()
 
 app = FastAPI(
-    title="Cattle Identification & Geo-Analysis API",
+    title="Cattle Identification & Geo-Analysis API",   
     version="1.0.0",
     lifespan=lifespan 
 )
