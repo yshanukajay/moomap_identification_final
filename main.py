@@ -2,6 +2,27 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from cattle_id_api.app.api import endpoints
 from cattle_id_api.app.services.db_manager import db_instance
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows ALL apps to connect (Easiest for development)
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
+    allow_headers=["*"],
+)
+
+# Add this block immediately after creating 'app'
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows ALL apps to connect (Easiest for development)
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
+    allow_headers=["*"],
+)
 
 app = FastAPI(
     title="Cattle Identification & Geo-Analysis API",
