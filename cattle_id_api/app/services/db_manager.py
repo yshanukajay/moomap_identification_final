@@ -1,5 +1,5 @@
 from motor.motor_asyncio import AsyncIOMotorClient
-from app.core.config import settings
+from cattle_id_api.app.core.config import settings
 import logging
 
 class DBManager:

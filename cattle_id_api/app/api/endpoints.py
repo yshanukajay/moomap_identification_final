@@ -4,10 +4,10 @@ from typing import Optional, List, Dict
 import httpx 
 import math # <--- Needed to fix the Error
 
-from app.services.db_manager import db_instance
-from app.services.geo_analyzer import analyzer
-from app.ai.health_model import health_predictor
-from app.ai.battery_model import battery_predictor
+from cattle_id_api.app.services.db_manager import db_instance
+from cattle_id_api.app.services.geo_analyzer import analyzer
+from cattle_id_api.app.ai.health_model import health_predictor
+from cattle_id_api.app.ai.battery_model import battery_predictor
 
 router = APIRouter()
 

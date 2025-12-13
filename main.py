@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
-from app.api import endpoints
-from app.services.db_manager import db_instance
+from cattle_id_api.app.api import endpoints
+from cattle_id_api.app.services.db_manager import db_instance
 
 app = FastAPI(
     title="Cattle Identification & Geo-Analysis API",
